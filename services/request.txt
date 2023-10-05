@@ -1,0 +1,28 @@
+{
+  "customerName": "Van",
+  "phoneNumber": "123",
+  "email": "van@email.com",
+  "service": "General Programming",
+  "comments": "build internal web"
+}
+{
+  "customerName": "Van 2",
+  "phoneNumber": "1234",
+  "email": "van@email.com",
+  "service": "Other",
+  "comments": "iOS App Design"
+}
+{
+  "customerName": "Van2",
+  "phoneNumber": "51999999",
+  "email": "van@email.com",
+  "service": "Other",
+  "comments": "API design"
+}
+{
+  "customerName": "Van5",
+  "phoneNumber": "123",
+  "email": "van@email.com",
+  "service": "Database Management",
+  "comments": "ERD and SQL Database Ecommerce"
+}

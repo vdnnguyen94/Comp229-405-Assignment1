@@ -1,0 +1,112 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+
+    <!--<img src="img/logo.png" alt="logo">-->
+
+<main class="container">
+<div>
+
+    <h1>Welcome to <%= title %> Page</h1>
+    <h1>Service Request Form</h1>
+    
+    <form class="form-horizontal" action="/contact" method="POST">
+        <!-- Service Selection -->
+        <div class="row mb-3">
+        <label class="col-sm-2 col-form-label text-right" for="service">Service:</label>
+        <div class="col-sm-10">
+        <select class="form-control" id="service" name="service" required>
+            <option value="General Programming">General Programming</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Mobile Apps">Mobile Apps</option>
+            <option value="Database Management">Database Management</option>
+            <option value="Other">Other</option>
+        </select>
+        </div>
+        </div>
+        
+        <!-- If "Other" is selected, show an input field for custom service -->
+        
+        <div id="otherService" style="display: none;">
+            <div class="row mb-3">
+                <label for="otherServiceInput" class="col-sm-2 col-form-label text-right">Other Service:</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="otherServiceInput" name="otherServiceInput">
+                </div>
+              </div>
+        </div>
+        <!-- Customer Name -->
+        <div class="row mb-3">
+            <label for="customerName" class="col-sm-2 col-form-label text-right">Customer Name:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="customerName"  name="customerName" required>
+            </div>
+          </div>
+
+        <!-- Phone Number -->
+        <div class="row mb-3">
+            <label for="phoneNumber" class="col-sm-2 col-form-label text-right">Phone Number:</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+        </div>
+        <!-- Email -->
+        <div class="row mb-3">
+            <label for="email" class="col-sm-2 col-form-label text-right">Email:</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="email" id="email" name="email" required>
+            </div>
+        </div>
+
+        <!-- Comments -->
+        <div class="row mb-3">
+            <label for="comments" class="col-sm-2 col-form-label">Comments:</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="comments" name="comments" rows="4" cols="50"></textarea>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // JavaScript to show/hide the "Other" input field based on service selection
+        const serviceSelect = document.getElementById('service');
+        const otherServiceDiv = document.getElementById('otherService');
+        const otherServiceInput = document.getElementById('otherServiceInput');
+        
+        // Get the selected service from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedService = urlParams.get('service');
+
+        // Set the selected option in the dropdown
+        if (selectedService) {
+            const option = document.querySelector(`#service option[value="${selectedService}"]`);
+            if (option) {
+                option.selected = true;
+            } else {
+                // If the selected service doesn't match any option, select "Other"
+                document.querySelector('#service option[value="Other"]').selected = true;
+                otherServiceDiv.style.display = 'block';
+            }
+        }
+
+        serviceSelect.addEventListener('change', function () {
+            if (serviceSelect.value === 'Other') {
+                otherServiceDiv.style.display = 'block';
+                otherServiceInput.setAttribute('required', 'required');
+            } else {
+                otherServiceDiv.style.display = 'none';
+                otherServiceInput.removeAttribute('required');
+            }
+        });
+    </script>
+</div>
+</main>
+
+      <%- include ('partials/bottom_nav.ejs') %>
+      <%- include ('partials/footer.ejs') %>
+
+
+
+   
