@@ -9,7 +9,7 @@
     <h1>Welcome to <%= title %> Page</h1>
     <h1>Service Request Form</h1>
     
-    <form class="form-horizontal" action="/contact" method="POST">
+    <form class="form-horizontal text-center" action="/contact" method="POST">
         <!-- Service Selection -->
         <div class="row mb-3">
         <label class="col-sm-2 col-form-label text-right" for="service">Service:</label>
@@ -17,7 +17,6 @@
         <select class="form-control" id="service" name="service" required>
             <option value="General Programming">General Programming</option>
             <option value="Web Development">Web Development</option>
-            <option value="Mobile Apps">Mobile Apps</option>
             <option value="Database Management">Database Management</option>
             <option value="Other">Other</option>
         </select>
@@ -66,7 +65,7 @@
         </div>
 
         <!-- Submit Button -->
-        <input type="submit" value="Submit">
+        <input type="submit" class="btn btn-primary btn-lg">
     </form>
 
     <script>

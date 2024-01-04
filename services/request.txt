@@ -26,3 +26,17 @@
   "service": "Database Management",
   "comments": "ERD and SQL Database Ecommerce"
 }
+{
+  "customerName": "Van",
+  "phoneNumber": "Nguyen",
+  "email": "vdnnguyen94@gmail.com",
+  "service": "General Programming",
+  "comments": "qwe"
+}
+{
+  "customerName": "ewqewq",
+  "phoneNumber": "asdas",
+  "email": "vdnnguyen94@gmail.com",
+  "service": "General Programming",
+  "comments": "wqe"
+}
