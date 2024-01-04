@@ -1,0 +1,178 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+.navbar-nav .nav-link {
+    font-size: 25px; /* Adjust the font size as needed */
+  }
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 90%;
+}
+table { table-layout: fixed;}
+.fixt { table-layout: fixed;}
+ul.navbar-max {
+    list-style: none; /* Remove the bullet */
+    display: inline; /* Display the list items inline */
+    float:right;
+    font-size:20px
+    
+}
+
+ul.navbar-max li {
+    display: inline-block; /* Make the list items display inline */
+}
+a:link {
+text-decoration: none;
+}
+.tcenter
+{
+    text-align: center;
+}
+
+
+
+
+a:visited {
+text-decoration: none;
+}
+
+
+a:hover {
+text-decoration: none;
+}
+
+
+a:active {
+text-decoration: none;
+}
+
+html,
+body {
+height: 100%;
+margin: 0;
+}
+
+body {
+display: flex;
+flex-direction: column;
+}
+
+main {
+flex: 1;
+}
+
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px;
+}
+
+footer .navbar-text {
+    margin-bottom: 0;
+}
+
+/* Style the active tab */
+.active {
+    color: #1850a3; /* Change this to your desired text color */
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+.textsize {
+    font-size: large;
+}
+div.relative {
+    position: relative;
+    width: 100%;
+   
+  } 
+  
+  div.absolute1 {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 27%;
+
+  }
+  div.absolute2 {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 73%;
+
+  }
+.height500{
+    height: 910px;
+}
+.height350{
+    height: 180px;
+}
+/* Media Query for Small Screens */
+@media (max-width: 1500px) {
+    div.relative {
+      flex-direction: column;
+    }
+  
+    div.absolute1,
+    div.absolute2 {
+      position: relative;
+      width: 100%;
+    }
+  
+    .height500 {
+      height: auto;
+    }
+  
+    .alert-info.textsize {
+      margin-bottom: 20px; /* Adjust the margin as needed */
+    }
+  }
+  
+  /* Default Styles */
+  div.relative {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  div.absolute1 {
+    width: 27%;
+  }
+  
+  div.absolute2 {
+    width: 73%;
+  }
+  
+  .div2 {
+    padding-left: 15px; /* Adjust the padding as needed */
+    padding-right: 5px; /* Adjust the padding as needed */
+  }
+  
+  /* Center the text in the second box */
+  .div2 h2.tcenter,
+  .div2 p {
+    text-align: center;
+  }

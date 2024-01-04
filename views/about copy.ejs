@@ -1,21 +1,16 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/main_nav.ejs') %>
 
-    <!--<img src="img/logo.png" alt="logo">-->
+    <!--<img src="img/logo.jpg" alt="logo">-->
 
 <main class="container">
 <div class="jumbotron">
-
-    <h1 class="tcenter">Welcome to <%= title %> Me Page</h1>
-    <div class="alert alert-info textsize relative">
-        
-        <div class="div1">
-        <img src="img/ProfilePicture.jpg" height="100%" widht="100%" alt="ProfilePicture">
-        </div>
-        <div class="div2">
-        <h2 class="tcenter">Education</h2>
-        <p>I'm Van Nguyen, currently in my third semester of Software Engineering Technology at Centennial College. I bring a strong background in software development, relational databases, and problem-solving skills. My expertise includes Python, web programming languages, and C.</p>
-        <h2 class="tcenter">Qualifications</h2>
+    <div class="alert alert-info textsize height500">
+        <div class="relative">
+            <div class="absolute1"> <img src="img/ProfilePicture.jpg" height="100%" widht="100%" alt="ProfilePicture"></div>
+            <div class="absolute2"><h2>Education</h2><p>I'm Van Nguyen, currently in my third semester of Software Engineering Technology at Centennial College. I bring a strong background in software development, relational databases, and problem-solving skills. My expertise includes Python, web programming languages, and C.</p>
+  
+                <h2>Qualifications</h2>
         <ul>
             <li> Strong analytical skills, attention to detail, and problem-solving abilities.</li>
             <li> Proficient in web development with expertise in utilizing frameworks such as Flask, Django, and the MERN stack. </li>
@@ -24,32 +19,28 @@
             <li> Excellent communication and interpersonal skills developed through coursework and projects. </li>
             <li> Track record of implementing, troubleshooting, and thoroughly documenting software solutions, utilizing Git for version control, unit testing, and other best practices.</li>
         </ul>
-
-        </div>
-    </div>
-
-    <div class="alert alert-info textsize">
-        <h2 class="tcenter">Certifications and Trainings</h2>
+        <h2>Certifications and Trainings</h2>
         <ul>
             <li>Advanced CS50’s Web Programming with Python and JavaScript | Completed 75%+ problem sets | Harvard University</li>
             <li>CS50 Certificate obtained by scoring at least 70% on all problem sets and final projects | Harvard University | David J. Malan</li>
             <li>Udemy | The Complete JavaScript Course | Wordle, Blackjack, solved 100 JavaScript problems | Jonas Schmedtmann</li>
         </ul> 
-    </div>
-    <div class="alert alert-info textsize">
-        <h2 class="tcenter">Programming Languages, Frameworks & Tools</h2>
+        <h2>Programming Languages, Frameworks & Tools</h2>
         <ul>
             <li><b>Experienced:</b> Python, JavaScript, C#, HTML5/CSS, Sqlite3, Oracle SQL, MySQL, MongoDB, Linux, Django, Java, JavaFX</li>
             <li><b>Familiar:</b> C++, C, Scratch, Agile, MATLAB, LabVIEW</li>
             <li><b>Frameworks, Libraries & Tools:</b> MERN Stack, Flask, CS50 IDE, Visual Studio, VS Code, Anaconda, Spyder, Postman, Visual Paradigm, Visio, Git, GitHub, React, Nodejs, CRUD APIs, RESTful APIs</li>
         </ul>
+        </div>
+        </div>
     </div>
     <div class="alert alert-info textsize">
-        <a href="/Resume.pdf"><h2 class="tcenter">Download My Resume (pdf)</h2></a>
+        <a href="/Resume.pdf"><h2 class="tcenter">Download My Resume (pdf)</h2>
     </div>
 </div>
-<div class="height350"></div>
+
 </main>
+<div class="height350"></div>
       <%- include ('partials/bottom_nav.ejs') %>
       <%- include ('partials/footer.ejs') %>
 
