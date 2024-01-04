@@ -1,79 +1,31 @@
 <nav class="bg-light border navbar navbar-expand-md navbar-light">
   <div class="container-fluid">
-      <a class="navbar-brand" href="/"><span><img src="/img/logo9.png" alt="img" style: width="150px"; height="100px"></span><span class="blue">VAN NGUYEN's</span><span class="red"> PORTFOLIO</span></a>
-      <div class="collapse navbar-collapse" id="navbar">
-
-              <ul class="navbar-nav me-auto mt-2 nav">
-                <ul class="nav">
-                  <li class="nav-item <%= title === 'Home' ? 'active' : '' %>">
-                    <a class="nav-link" href="/"></i> Home</a>
-                  </li>
-                  <li class="nav-item <%= title === 'About' ? 'active' : '' %>">
-                    <a class="nav-link" href="/about">About</a>
-                  </li>
-                  <li class="nav-item <%= title === 'Projects' ? 'active' : '' %>">
-                    <a class="nav-link" href="/projects">Projects</a>
-                  </li>
-                  <li class="nav-item <%= title === 'Services' ? 'active' : '' %>">
-                    <a class="nav-link" href="/services">Services</a>
-                  </li>
-                  <li class="nav-item <%= title === 'Contact' ? 'active' : '' %>">
-                    <a class="nav-link" href="/contact">Contact</a>
-                  </li>
-                </ul>
-                
-
-              </ul>
-      </div>
-  </div>
-</nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<img src="img/logo.png" alt="logo"
-
-<img src="img/logo.png" alt="logo"
-<nav class="navbar navbar-expand-lg navbar-dark bg-black">
-  <div class="container-fluid">
-    <img src="/img/logo1.jpg" alt="logo" style: width="150px"; height="100px">
-    <a class="navbar-brand" href="#">Van Nguyen's Portfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="/">
+      <span><img src="/img/logo9.png" alt="img" class="img-fluid" style="max-width: 150px; height: auto;"></span>
+      <span class="blue fs-5 fs-md-4 fs-lg-3">VAN NGUYEN's</span><span class="red fs-5 fs-md-4 fs-lg-3"> PORTFOLIO</span>
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-max ml-auto mb-2 mb-lg-0">
-        <b>
-        <% if (title=="Home"){%>
-        <li class="nav-item active">
-          <%}else{%>
-            <li class="nav-item">
-              <%}%>
-          <a class="nav-link"  href="/"><i class="fas fa-lg fa-laptop-house"></i>Home</a>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav me-auto mt-2 nav">
+        <li class="nav-item <%= title === 'Home' ? 'active' : '' %>">
+          <a class="nav-link" href="/">Home</a>
         </li>
-
-
+        <li class="nav-item <%= title === 'About' ? 'active' : '' %>">
+          <a class="nav-link" href="/about">About</a>
         </li>
-    </b>
-        </ul>
+        <li class="nav-item <%= title === 'Projects' ? 'active' : '' %>">
+          <a class="nav-link" href="/projects">Projects</a>
+        </li>
+        <li class="nav-item <%= title === 'Services' ? 'active' : '' %>">
+          <a class="nav-link" href="/services">Services</a>
+        </li>
+        <li class="nav-item <%= title === 'Contact' ? 'active' : '' %>">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
->-->
