@@ -3,7 +3,9 @@ nav .navbar-brand
 {
     font-size: xx-large;
 }
-
+.navbar-nav .nav-link {
+    font-size: 25px; /* Adjust the font size as needed */
+  }
 /* Colors for brand */
 nav .navbar-brand .blue
 {
@@ -113,18 +115,18 @@ div.relative {
     position: absolute;
     top: 0px;
     left: 0;
-    width: 40%;
+    width: 27%;
 
   }
   div.absolute2 {
     position: absolute;
     top: 0px;
     right: 0;
-    width: 60%;
+    width: 73%;
 
   }
 .height500{
-    height: 550px;
+    height: 910px;
 }
 .height350{
     height: 180px;
