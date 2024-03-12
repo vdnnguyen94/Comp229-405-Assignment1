@@ -1,0 +1,75 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+
+    <!--<img src="img/logo.png" alt="logo">-->
+
+<main class="container">
+<div class="jumbotron">
+
+    <h1 class="tcenter">Welcome to My <%= title %> Page</h1>
+    <div class="alert alert-info textsize">
+        <h2 class="tcenter">Survey Application</h2>
+        <h3>MERN STACK | MongoDB | Express | React | Node | JavaScript | CSS | CRUD & RESTful API</h3>
+    <!-- Problem Statement -->
+        <h4>The Challenge:</h4>
+        <p>Managing survey questions and responses with varying structures (Multiple Choice, True/False and Text Field Questions) proved challenging. Ensuring data consistency and integrity became paramount, especially for multiple-choice questions.</p>
+
+        <!-- Solution Explanation -->
+        <h4>How I Solved It:</h4>
+        <p> Utilizing MongoDB and Mongoose, I implemented a robust data schema for survey questions. The model includes validations to ensure the integrity of data based on the question type.</p>
+        <p>For example, for multiple-choice questions (MC), the system enforces constraints such as the number of possible answers, their length, and the length of the survey results array.</p>
+        <p>This meticulous design guarantees a consistent and secure survey experience, preventing data discrepancies and enhancing the overall functionality of the application.</p>
+        <h4>Special Function: Download Survey Results</h4>
+        <p>As the owner of a survey, you have the capability to download comprehensive survey results for in-depth data analysis. This feature provides a JSON file containing general survey information and detailed insights into each survey question.</p>
+        <p>This powerful tool empowers you to extract valuable data, facilitating informed decision-making and a deeper understanding of participant responses.
+        </p>
+        
+        <a href="https://surveyappvannguyen.onrender.com"><h2 class="tcenter">Try my Survey App</h2></a>
+        <a href="https://youtu.be/kCOguOAAh1s"><h2 class="tcenter">Watch my Demo</h2></a>
+    </div>
+    <div class="alert alert-info textsize">
+        <h2 class="tcenter">Trading Web Application</h2>
+        <h3>Technologies and Skills:</h3>
+        <h3>Python | Sqlite3 | Flask | API | Git | Linux | AWS | HTML | JavaScript | CSS</h3>
+        <p>Over 100 registered users and active trading.</p>
+        <p>Enforcing client-side and server-side validations for registering accounts, signing in, buying, and selling stocks.</p>
+        <p>Using Google and Yahoo Finance APIs to obtain real-time stock prices and company names from stock symbols.</p>
+        <p>Automatically updating customers' stock portfolio data.</p>
+        <p>Strong database design for user accounts, user stocks, and transaction history.</p>
+        <a href="https://vannguyentrading.dev/"><h2 class="tcenter">Try My Trading Web: Live Stock Prices, Bonus $10,000 on Your First Sign-up</h2></a>
+    </div>
+    <div class="alert alert-info textsize">
+        <h2 class="tcenter">Online Encyclopedia</h2>
+        <h3>Python | Django | Markdown | Search | CSRF | HTML | JavaScript | CSS </h3>
+            <p><strong>Index Page:  </strong>Besides listing the names of all pages in the encyclopedia, user can click on any entry name to be taken directly to that entry page.</p>
+            <p><strong>Search: </strong>Allow the user to type a query into the search box in the sidebar to search for an encyclopedia entry</p>
+            <p><strong>New Page: </strong>Clicking “Create New Page” in the sidebar should take the user to a page where they can create a new encyclopedia entry.</p>
+            <p><strong>Edit Page: </strong>On each entry page, the user should be able to click a link to be taken to a page where the user can edit that entry’s Markdown content in a textarea.</p>
+            <p><strong>Markdown to HTML Conversion: </strong>On each entry&apos;s page, any Markdown content in the entry file should be converted to HTML before being displayed to the user. </p>
+
+        <div class="tcenter"> 
+            <a href="https://youtu.be/ySPbYByyBko?si=fOh78vIzECADk86g"><h2 class="tcenter">Watch my Youtube Demo</h2></a>
+        </div>
+    </div>
+    <div class="alert alert-info textsize">
+        <h2 class="tcenter">Banking App</h2>
+        <h3>C# | ASP.NET | OOP | JSON | MySQL</h3>
+        <h4>Enhanced Features:</h4>
+        <p>Setting up Database Connection with SQL.</p>
+        <p>Users can now create both checking and savings accounts.</p>
+        <p>Performing transactions such as withdrawal and deposit directly into their accounts.</p>
+        <p>Real-time update of customer balances.</p>
+        <h4>New Features:</h4>
+        <p>Bank officer credentials are securely stored in a JSON file.</p>
+        <p>Bank officers have the ability to search for customer banking information.</p>
+        <p>Bank officers can perform various banking operations on behalf of customers.</p>
+    </div>
+</div>
+<div class="height350"></div>
+</main>
+      <%- include ('partials/bottom_nav.ejs') %>
+      <%- include ('partials/footer.ejs') %>
+
+
+
+   

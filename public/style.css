@@ -131,25 +131,7 @@ div.absolute2 {
     height: 180px;
 }
 
-/* Media Query for Small Screens */
-@media (max-width: 1500px) {
-    div.relative {
-        flex-direction: column;
-    }
 
-    div.absolute1, div.absolute2 {
-        position: relative;
-        width: 100%;
-    }
-
-    .height500 {
-        height: auto;
-    }
-
-    .alert-info.textsize {
-        margin-bottom: 20px;
-    }
-}
 
 /* Div2 Padding Styles */
 .div2 {
@@ -167,7 +149,11 @@ div.absolute2 {
     max-width: 100%;
     height: auto;
 }
-
+.iframe-container {
+    display: flex;
+    justify-content: center; /* Centers the iframe horizontally */
+    width: 100%; /* Ensures the container takes up full width of its parent */
+}
 /* Image Size Adjustment Styles */
 @media (max-width: 767px) {
     .alert-info img {
