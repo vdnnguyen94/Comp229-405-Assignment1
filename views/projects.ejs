@@ -1,49 +1,184 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/main_nav.ejs') %>
 
-<main class="container">
-    <div class="jumbotron">
-        <h1 class="tcenter">Welcome to My <%= title %> Page</h1>
-
-        <!-- Unified Trading Web Application Section -->
-        <div class="alert alert-info textsize">
-            <h2 class="tcenter">Trading Web Application</h2>
-            <p>Founder, Toronto, ON - Dec 2023. A dynamic application leading to a 50% increase in trading activities and over 100 active users in three months. Featuring comprehensive database management and real-time stock updates for enhanced user experience.</p>
-            <p><strong>Key Technologies:</strong> ASP.NET, Azure SQL, Entity Framework, TypeScript, React TSX 
-                <br> <strong>Flask Stack:</strong>  Python, SQLite3, Boostrap, JavaScript, HTML, CSS, AWS.</p>
-            <a href="https://tradingwebasp.azurewebsites.net/">Live Demo (ASP.NET Version)</a> | <a href="https://github.com/vdnnguyen94/ASPReactTypeScript">GitHub Repository (ASP.NET Version)</a>
-            <br>
-            <a href="https://vannguyentrading.dev/">Live Demo (Flask Version)</a> | <a href="https://github.com/vdnnguyen94/web">GitHub Repository (Flask Version)</a>
+<main class="section-padding">
+    <div class="container">
+        <div class="text-center">
+            <h1>Projects</h1>
+            <p class="lead">A selection of my work in data analysis, healthcare IT, and full-stack development.</p>
         </div>
-        
-        <div class="alert alert-info textsize">
-            <h2 class="tcenter">Survey Web Application</h2>
-            <p>Overcoming the challenge of managing diverse survey questions through a robust MongoDB schema, leading to 150 unique surveys and over 20,000 responses in six months. Enhanced security and user engagement through meticulous design and analytics.</p>
-            <p><strong>Key Technologies:</strong> MongoDB, Express TS, React TSX, Node TS, CRUD and RESTful API, Middleware with JWT Token.</p>
-           
-            <p><strong>Try my Survey App (TypeScript Version):</strong> <a href="https://surveytypescript.onrender.com/">Demo Link</a> | <a href="https://github.com/vdnnguyen94/SurveyTypeScript">GitHub Repository</a></p>
-            <p><strong>Try my Survey App (JavaScript Version):</strong> <a href="https://surveyappvannguyen.onrender.com/">Demo Link</a> | <a href="https://github.com/vdnnguyen94/SurveyAppGroup1">GitHub Repository</a></p>
-            <h2 class="tcenter">Watch my Demo</h2>
-            <div class="iframe-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/kCOguOAAh1s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <button class="btn filter-btn active" data-filter="all">All</button>
+                <button class="btn filter-btn" data-filter="healthcare-ai">Healthcare & AI</button>
+                <button class="btn filter-btn" data-filter="full-stack">Full Stack</button>
+                <button class="btn filter-btn" data-filter="data-etl">Data & ETL</button>
             </div>
-        </div> 
-        <!-- Unified Survey Web Application Section -->
-        <div class="alert alert-info textsize">
-            <h2 class="tcenter">Banking App</h2>
-            <h3>C# | ASP.NET | OOP | JSON | MySQL</h3>
-            <h4>Enhanced Features:</h4>
-            <p>Setting up Database Connection with SQL.</p>
-            <p>Users can now create both checking and savings accounts.</p>
-            <p>Performing transactions such as withdrawal and deposit directly into their accounts.</p>
-            <p>Real-time update of customer balances.</p>
-            <h4>New Features:</h4>
-            <p>Bank officer credentials are securely stored in a JSON file.</p>
-            <p>Bank officers have the ability to search for customer banking information.</p>
-            <p>Bank officers can perform various banking operations on behalf of customers.</p>
+        </div>
+
+        <div class="row g-4 mt-4 project-grid">
+
+            <div class="col-lg-4 col-md-6 project-col" data-category="healthcare-ai full-stack">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h3 class="card-title">ICD-10-CA Helper</h3>
+                        <p class="card-text">Developed an AI app to assist coders by analyzing clinical notes. The system uses vector embeddings for all ICD/CCI codes and breaks down analysis into smaller tasks assigned to AI agents. A final validation layer merges results and prevents duplicates. Selected to speak on this topic for CHIMA's HIP Week.</p>
+                        <ul class="tech-tags">
+                            <li class="tag">Gemini & GPT-4o</li>
+                            <li class="tag">Vector Embeddings</li>
+                            <li class="tag">AI Agents</li>
+                            <li class="tag">NestJS</li>
+                            <li class="tag">React</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://icd-10-helper.vercel.app/" target="_blank" class="btn-project"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/vdnnguyen94/ICD10Helper" target="_blank" class="btn-project"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 project-col" data-category="data-etl full-stack healthcare-ai">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Healthcare Interoperability (HL7)</h3>
+                        <p class="card-text">Engineered a FHIR data transfer platform for interoperability between LHSC and St. Joseph’s Healthcare (SJHC), featuring CRUD APIs for Patient & Observation resources. Also built automated ETL pipelines between LHSC and Alimentiv’s clinical research systems.</p>
+                        <ul class="tech-tags">
+                            <li class="tag">HL7 FHIR</li>
+                            <li class="tag">CRUD APIs</li>
+                            <li class="tag">SQL Server</li>
+                            <li class="tag">Spring Boot</li>
+                            <li class="tag">ETL</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer d-flex flex-wrap">
+                        <a href="https://github.com/vdnnguyen94/FrontendFHIR" target="_blank" class="btn-project me-2"><i class="fab fa-github"></i> Frontend</a>
+                        <a href="https://github.com/vdnnguyen94/BackendFHIR" target="_blank" class="btn-project me-2"><i class="fab fa-github"></i> Backend</a>
+                        <a href="https://github.com/vdnnguyen94/lhsc-fhir-server" target="_blank" class="btn-project"><i class="fab fa-github"></i> ETL Server</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 project-col" data-category="full-stack">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Hotel Staff Management</h3>
+                        <p class="card-text">An enterprise hotel staff management system built with a microservices architecture, featuring role-based access control and service discovery with Eureka.</p>
+                        <ul class="tech-tags">
+                            <li class="tag">Spring Boot</li>
+                            <li class="tag">Microservices</li>
+                            <li class="tag">React</li>
+                            <li class="tag">Eureka</li>
+                            <li class="tag">JPA</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.youtube.com/watch?v=8FHdZkW3Lk4&feature=youtu.be" target="_blank" class="btn-project"><i class="fab fa-youtube"></i> Video Demo</a>
+                        <a href="https://github.com/vdnnguyen94/SpringBootMicroservices" target="_blank" class="btn-project"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 project-col" data-category="full-stack">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Survey Web Application</h3>
+                        <p class="card-text">A full-stack survey platform with robust schema validation and analytics, supporting over 20,000 responses across 150 unique surveys. Features middleware with JWT for security.</p>
+                        <ul class="tech-tags">
+                            <li class="tag">MongoDB</li>
+                            <li class="tag">Express</li>
+                            <li class="tag">React</li>
+                            <li class="tag">Node.js</li>
+                            <li class="tag">JWT</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://surveytypescript.onrender.com/" target="_blank" class="btn-project"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/vdnnguyen94/SurveyTypeScript" target="_blank" class="btn-project"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 project-col" data-category="full-stack">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Trading Web Application</h3>
+                        <p class="card-text">A dynamic stock trading application with versions in both ASP.NET/Azure SQL and Python/Flask. Features real-time price updates and comprehensive database management.</p>
+                        <ul class="tech-tags">
+                            <li class="tag">ASP.NET</li>
+                            <li class="tag">Azure SQL</li>
+                            <li class="tag">Python</li>
+                            <li class="tag">Flask</li>
+                            <li class="tag">React</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://tradingwebasp.azurewebsites.net/" target="_blank" class="btn-project"><i class="fas fa-external-link-alt"></i> ASP.NET Demo</a>
+                        <a href="https://vannguyentrading.dev/" target="_blank" class="btn-project"><i class="fas fa-external-link-alt"></i> Flask Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 project-col" data-category="data-etl">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h3 class="card-title">Decision Support: Operating Budget</h3>
+                        <p class="card-text">Modeled operating budgets and a 20% reduction scenario for LHSC, benchmarking against peers using Ontario Health and CIHI data to provide data-driven recommendations.</p>
+                        <ul class="tech-tags">
+                            <li class="tag">Excel</li>
+                            <li class="tag">Decision Memos</li>
+                            <li class="tag">Forecasting</li>
+                            <li class="tag">Ontario Health</li>
+                            <li class="tag">CIHI</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                         <a href="/DecisionSupport.xlsx" class="btn-project" download><i class="fas fa-file-excel"></i> Download Analysis</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <div class="height350"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-col');
+    
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+    
+                    const filterValue = this.getAttribute('data-filter');
+    
+                    projectCards.forEach(card => {
+                        const categories = card.getAttribute('data-category');
+                        
+                        card.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+                        card.style.transform = 'scale(0.95)';
+                        card.style.opacity = '0';
+    
+                        setTimeout(() => {
+                            if (filterValue === 'all' || categories.includes(filterValue)) {
+                                card.style.display = 'block';
+                                // Trigger reflow
+                                void card.offsetWidth; 
+                                card.style.transform = 'scale(1)';
+                                card.style.opacity = '1';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }, 300);
+                    });
+                });
+            });
+        });
+    </script>
+    
 </main>
+
 <%- include ('partials/bottom_nav.ejs') %>
 <%- include ('partials/footer.ejs') %>

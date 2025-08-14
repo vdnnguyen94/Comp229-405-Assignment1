@@ -1,36 +1,32 @@
-<nav class="bg-light border navbar navbar-expand-md navbar-light">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
     <a class="navbar-brand" href="/">
-      <span><img src="/img/logo9.png" alt="img" class="img-fluid" style="max-width: 90px; height: auto;"></span>
-      <span class="blue fs-5 fs-md-4 fs-lg-3">VAN NGUYEN's</span><span class="red fs-5 fs-md-4 fs-lg-3"> PORTFOLIO</span>
+      <svg class="logo-svg" width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="100" rx="20" fill="var(--primary-accent)"/>
+        <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="Poppins, sans-serif" font-size="50" font-weight="700" fill="white">VN</text>
+      </svg>
     </a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="navbar-nav me-auto mt-2 nav">
-        <li class="nav-item <%= title === 'Home' ? 'active' : '' %>">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
-        <li class="nav-item <%= title === 'About' ? 'active' : '' %>">
-          <a class="nav-link" href="/Resume.pdf" onclick="openInNewWindow('/Resume.pdf'); return false;">Resume</a>
-        </li>
-        <li class="nav-item <%= title === 'Projects' ? 'active' : '' %>">
+        <li class="nav-item">
           <a class="nav-link" href="/projects">Projects</a>
         </li>
-        <li class="nav-item <%= title === 'Services' ? 'active' : '' %>">
-          <a class="nav-link" href="/services">Services</a>
+        <li class="nav-item">
+            <a class="nav-link" href="/#credentials">Credentials</a>
         </li>
-        <li class="nav-item <%= title === 'Contact' ? 'active' : '' %>">
-          <a class="nav-link" href="/contact">Contact</a>
+        <li class="nav-item">
+            <a class="nav-link" href="/Resume.pdf" target="_blank">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn-nav-contact" href="/contact">Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-<script>
-  function openInNewWindow(url) {
-    window.open(url, '_blank', 'width=600,height=400');
-  }
-</script>

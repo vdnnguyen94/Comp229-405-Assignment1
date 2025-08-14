@@ -1,174 +1,393 @@
-/* Brand Styles */
-nav .navbar-brand {
-    font-size: xx-large;
+/* Van Nguyen Portfolio Redesign - August 2025 */
+
+/* 1. Root Variables & Global Styles ============================ */
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --background-dark: #1a1a2e;
+    --background-light: #16213e;
+    --primary-accent: #0f3460;
+    --secondary-accent: #e94560;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --card-bg: #1f2847;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+/* Add this right after the :root { ... } block */
+html {
+    scroll-behavior: smooth;
+    /* This new property below helps with the active link highlighting */
+    scroll-padding-top: 100px; 
+}
+body {
+    font-family: var(--primary-font);
+    background-color: var(--background-dark);
+    color: var(--text-primary);
 }
 
-.navbar-nav .nav-link {
-    font-size: 25px;
+main {
+    flex: 1; /* Pushes footer down */
 }
 
-/* Brand Colors */
-nav .navbar-brand .blue {
-    color: #537fbe;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--text-primary);
 }
 
-nav .navbar-brand .red {
-    color: #ea433b;
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 
-nav .navbar-brand .yellow {
-    color: #f5b82e;
-}
-
-nav .navbar-brand .green {
-    color: #2e944b;
-}
-
-/* Container Styles */
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 90%;
-}
-
-/* Table Styles */
-table, .fixt {
-    table-layout: fixed;
-}
-
-/* Navbar Styles */
-ul.navbar-max {
-    list-style: none;
-    display: inline;
-    float: right;
-    font-size: 20px;
-}
-
-ul.navbar-max li {
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-accent);
     display: inline-block;
 }
 
-/* Link Styles */
-a:link,
-a:visited,
-a:hover,
-a:active {
+p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+a {
+    color: var(--secondary-accent);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Text Center Styles */
-.tcenter {
-    text-align: center;
+a:hover {
+    color: white;
 }
 
-/* Body Styles */
-html, body {
+.section-padding {
+    padding: 80px 0;
+}
+
+.accent-text {
+    color: var(--secondary-accent);
+}
+
+/* 2. Navigation & Footer ============================ */
+.navbar {
+    background-color: rgba(26, 26, 46, 0.85); /* Semi-transparent */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-secondary) !important;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: white !important;
+}
+
+.navbar-toggler {
+    border-color: var(--border-color);
+}
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+footer.footer {
+    background-color: var(--background-light);
+    color: var(--text-secondary);
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+}
+footer.footer .social-icon {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+footer.footer .social-icon:hover {
+    color: var(--secondary-accent);
+}
+
+/* 3. Hero Section (Homepage) ============================ */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .lead {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+}
+
+.btn-custom-primary {
+    background-color: var(--secondary-accent);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--secondary-accent);
+}
+
+.btn-custom-primary:hover {
+    background-color: transparent;
+    color: var(--secondary-accent);
+    transform: translateY(-3px);
+}
+
+.btn-custom-secondary {
+    background-color: transparent;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--border-color);
+}
+
+.btn-custom-secondary:hover {
+    background-color: var(--secondary-accent);
+    border-color: var(--secondary-accent);
+    transform: translateY(-3px);
+}
+
+/* 4. Skills Section (Homepage) ============================ */
+.skills-section {
+    background-color: var(--background-light);
+}
+.skill-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
     height: 100%;
-    margin: 0;
+}
+.skill-card h3 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--primary-accent);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+}
+.skill-card ul li {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+.skill-card ul li i {
+    color: var(--secondary-accent);
+    margin-right: 10px;
+}
+
+/* 5. Projects Section ============================ */
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-/* Main Styles */
-main {
-    flex: 1;
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
-/* Footer Styles */
-footer {
-    background-color: #343a40;
-    color: #ffffff;
+.project-card .card-body {
+    padding: 1.8rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.project-card .card-text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    flex-grow: 1;
+}
+
+.tech-tags {
+    padding: 0;
+    margin: 1rem 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.tech-tags .tag {
+    background-color: var(--primary-accent);
+    color: var(--text-primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-card .card-footer {
+    background-color: transparent;
+    border-top: 1px solid var(--border-color);
+    padding: 1rem 1.8rem;
+}
+
+.project-card .btn-project {
+    margin-right: 10px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+.project-card .btn-project:hover {
+    color: var(--secondary-accent);
+}
+.project-card .btn-project i {
+    margin-right: 5px;
+}
+
+
+/* 6. Services & Contact Pages ============================ */
+.service-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+.service-card i {
+    font-size: 3rem;
+    color: var(--secondary-accent);
+    margin-bottom: 1.5rem;
+}
+
+.form-control, .form-select {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
     padding: 10px;
 }
-
-footer .navbar-text {
-    margin-bottom: 0;
+.form-control:focus, .form-select:focus {
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    border-color: var(--secondary-accent);
+    box-shadow: 0 0 0 0.25rem rgba(233, 69, 96, 0.25);
+}
+.form-label {
+    color: var(--text-secondary);
 }
 
-/* Active Tab Styles */
-.active {
-    color: #1850a3;
-    font-size: medium;
-    font-weight: bold;
+/* 7. Navigation CTA Button ============================ */
+.btn-nav-contact {
+    background-color: var(--secondary-accent);
+    color: white !important;
+    padding: 8px 20px !important;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.btn-nav-contact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 69, 96, 0.2);
+}
+
+/* 8. Hero Section Adjustments for Large Screens ============================ */
+.hero-image {
+    border-radius: 25px; /* Creates the soft-cornered square */
+    max-width: 400px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* Media Query for screens wider than 1400px */
+@media (min-width: 1400px) {
+    .hero-section h1 {
+        font-size: 3.5rem; /* Makes heading bigger to balance image */
+    }
+    .hero-image {
+        max-width: 500px; /* Makes image even larger on big screens */
+    }
+}
+/* 10. Project Filter Menu Styling ============================ */
+.filter-btn {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    margin: 0 5px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-accent);
+    color: white;
+    border-color: var(--primary-accent);
+}
+
+.filter-btn.active {
+    background-color: var(--secondary-accent);
+    color: white;
+    border-color: var(--secondary-accent);
+}
+
+/* 12 Education & Certifications Section ============================ */
+.credential-card {
+    background-color: var(--background-light);
+    border-left: 4px solid var(--secondary-accent);
+    padding: 1.5rem;
     border-radius: 5px;
 }
 
-/* Text Size Styles */
-.textsize {
-    font-size: large;
+.credential-title {
+    font-weight: 700; /* This makes the titles bold */
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
 }
 
-/* Relative and Absolute Styles */
-div.relative {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.credential-issuer {
+    font-size: 1rem;
+    color: var(--text-secondary);
 }
 
-div.absolute1, div.absolute2 {
-    position: absolute;
-    top: 0;
+/* 13 Certification Link Styling ============================ */
+a.credential-link {
+    text-decoration: none; /* Removes the default underline */
 }
 
-div.absolute1 {
-    width: 27%;
+a.credential-link .credential-title {
+    transition: color 0.3s ease;
 }
 
-div.absolute2 {
-    width: 73%;
+a.credential-link:hover .credential-title {
+    color: var(--secondary-accent); /* Changes color on hover */
 }
 
-/* Height Styles */
-.height500 {
-    height: 910px;
-}
-
-.height350 {
-    height: 180px;
-}
-
-
-
-/* Div2 Padding Styles */
-.div2 {
-    padding-left: 15px;
-    padding-right: 5px;
-}
-
-/* Center Text Styles */
-.div2 h2.tcenter, .div2 p {
-    text-align: center;
-}
-
-/* Image Styles */
-.alert-info img {
-    max-width: 100%;
-    height: auto;
-}
-.iframe-container {
-    display: flex;
-    justify-content: center; /* Centers the iframe horizontally */
-    width: 100%; /* Ensures the container takes up full width of its parent */
-}
-/* Image Size Adjustment Styles */
-@media (max-width: 767px) {
-    .alert-info img {
-        max-width: 100%;
-        height: auto;
-    }
-    .btn-submit {
-        margin-top: 10px;
-        margin-bottom: 100px; /* Adjust the margin as needed to separate the button from the form */
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .alert-info img {
-        max-width: 80%;
-        height: auto;
-    }
+.credential-title .fa-external-link-alt {
+    opacity: 0.6;
+    margin-left: 5px;
 }

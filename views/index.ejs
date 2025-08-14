@@ -1,80 +1,134 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/main_nav.ejs') %>
 
-    <!--<img src="img/logo.jpg" alt="logo">-->
+<header class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-xl-6">
+                <h1 class="display-4">Hi, I'm <span class="accent-text">Van Nguyen</span></h1>
+                <p class="lead my-4">A data analyst focused on decision support who builds predictive dashboards and automated SQL and SAS pipelines. I cut reporting cycle time by 85% and reduced unplanned slowdowns by 12% at PPG.</p>
+                <a href="/projects" class="btn btn-custom-primary me-2">View My Work</a>
+                <a href="/Resume.pdf" target="_blank" class="btn btn-custom-secondary">Download Resume</a>
+            </div>
+            <div class="col-lg-5 col-xl-6 d-none d-lg-block text-center ps-xl-5">
+                 <img src="/img/ProfilePicture.jpg" alt="Van Nguyen" class="img-fluid hero-image">
+            </div>
+        </div>
+    </div>
+</header>
 
-<main class="container">
-<div class="jumbotron">
-    <h2 class="tcenter">Welcome to My Portfolio</h2>
-    <% if (customerName) { %>
-        <div class="alert alert-info textsize"">
-            Thank you, <%= customerName %>. Your inquiry has been submitted. Van Nguyen will contact and follow up with you shortly!
+<main>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h2>About Me</h2>
+                    <p class="mb-4">
+                        I am a results-oriented analyst and developer with a unique background spanning software engineering, data analytics, and healthcare systems management. My passion lies in transforming complex data into actionable insights that drive efficiency and inform strategic decisions. I have hands-on experience in building repeatable ETL pipelines, performing queue/bottleneck analysis, and communicating data-driven recommendations to diverse stakeholders. Currently, I am enhancing my expertise through the Health Systems Management program at Fanshawe College and am on track to take the CHIM exam in October 2025.
+                    </p>
+                </div>
+            </div>
         </div>
-    <% } %> 
-    <div class="alert alert-info textsize relative">
-        <div class="div1">
-            <img src="img/ProfilePicture.jpg" height="100%" width="100%" alt="ProfilePicture">
+    </section>
+
+    <section class="skills-section section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="row g-4 mt-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-card">
+                        <h3><i class="fas fa-code"></i> Languages & Databases</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Python, SAS, SQL, C#</li>
+                            <li><i class="fas fa-check"></i> JavaScript, TypeScript, Java</li>
+                            <li><i class="fas fa-check"></i> HTML5/CSS3, C++, Linux</li>
+                            <li><i class="fas fa-check"></i> SQL Server, Azure SQL, MySQL</li>
+                            <li><i class="fas fa-check"></i> Oracle, MongoDB, SQLite</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-card">
+                        <h3><i class="fas fa-cogs"></i> Frameworks & Libraries</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> ASP.NET (MVC), .NET, MERN Stack</li>
+                            <li><i class="fas fa-check"></i> React, Node.js, Flask</li>
+                            <li><i class="fas fa-check"></i> Spring Boot, jQuery, Ajax</li>
+                            <li><i class="fas fa-check"></i> RESTful APIs, GraphQL</li>
+                            <li><i class="fas fa-check"></i> LINQ, Lambda Expressions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-card">
+                        <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Power BI, Tableau, Power Automate</li>
+                            <li><i class="fas fa-check"></i> Azure, AWS, Azure DevOps</li>
+                            <li><i class="fas fa-check"></i> Git, GitHub, Jenkins</li>
+                            <li><i class="fas fa-check"></i> HL7 FHIR, CI/CD, Agile</li>
+                            <li><i class="fas fa-check"></i> Visual Studio, VS Code, Postman</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="div2">
-            <h2 class="tcenter">Education</h2>
-            <p>I'm Van Nguyen, a fourth-semester Software Engineering Technology student at Centennial College. My studies have equipped me with a strong foundation in software development, relational databases, and problem-solving.</p>
-    
-            <h2 class="tcenter">Skills & Qualifications</h2>
-            <ul>
-                <li> Strong analytical skills, attention to detail, and effective problem-solving abilities.</li>
-                <li> Proficient in web development using frameworks such as ASP.NET, the MERN stack with TypeScript and JavaScript, Flask, Django</li>
-                <li> Experience with databases, including Oracle SQL, MySQL, AzureSQL and MongoDB, along with hands-on data analysis.</li>
-                <li> Comfortable with Git for version control, Azure, AWS cloud computing services and working in a collaborative Agile environment.</li>
-                <li> Excellent communication and interpersonal skills developed through coursework and projects.</li>
-                <li> Track record of implementing, troubleshooting, and documenting software solutions.</li>
-            </ul>
+    </section>
+
+    <section id="credentials" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2>Education & Certifications</h2>
+            </div>
+            <div class="row g-4 mt-5">
+                <div class="col-lg-6">
+                    <h3 class="mb-4"><i class="fas fa-graduation-cap accent-text me-2"></i> Education</h3>
+                    <div class="credential-card mb-4">
+                        <p class="credential-title">Graduate Certificate, Health Systems Management</p>
+                        <p class="credential-issuer mb-0">Fanshawe College — Expected Aug 2025</p>
+                    </div>
+                    <div class="credential-card mb-4">
+                        <p class="credential-title">Advanced Diploma, Software Engineering Technology</p>
+                        <p class="credential-issuer mb-0">Centennial College — Final Term Fall 2025</p>
+                    </div>
+                    <div class="credential-card">
+                        <p class="credential-title">Bachelor of Engineering Science (BESc)</p>
+                        <p class="credential-issuer mb-0">Western University — May 2017</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4"><i class="fas fa-certificate accent-text me-2"></i> Certifications</h3>
+                    <div class="credential-card mb-4">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="credential-link">
+                            <p class="credential-title">Microsoft Certified: Azure Database Administrator Associate <i class="fas fa-external-link-alt fa-xs"></i></p>
+                        </a>
+                        <p class="credential-issuer mb-0">DP-300</p>
+                    </div>
+                    <div class="credential-card mb-4">
+                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/VanDaiNghiaNguyen-9551/10A7734056D5D47B?sharingId=10117741F7D81AAF" target="_blank" rel="noopener noreferrer" class="credential-link">
+                             <p class="credential-title">Microsoft Certified: Azure Fundamentals <i class="fas fa-external-link-alt fa-xs"></i></p>
+                        </a>
+                        <p class="credential-issuer mb-0">AZ-900</p>
+                    </div>
+                    <div class="credential-card mb-4">
+                        <a href="https://certificates.cs50.io/21dfe796-797e-4ef1-be9b-513f1383b4ba.pdf?size=letter" target="_blank" rel="noopener noreferrer" class="credential-link">
+                            <p class="credential-title">CS50’s Web Programming with Python and JavaScript <i class="fas fa-external-link-alt fa-xs"></i></p>
+                        </a>
+                        <p class="credential-issuer mb-0">Harvard University</p>
+                    </div>
+                     <div class="credential-card">
+                        <a href="https://api.accredible.com/v1/auth/invite?code=443fec9a90a04e130d82&credential_id=ec811e2b-e2d0-49b0-a505-819c1b8bb628&url=https%3A%2F%2Fwww.credential.net%2Fec811e2b-e2d0-49b0-a505-819c1b8bb628&ident=1a3cf1763bcdaab6ae6fbd171fd77ccb496b571d" target="_blank" rel="noopener noreferrer" class="credential-link">
+                            <p class="credential-title">Lean Six Sigma Yellow Belt Professional <i class="fas fa-external-link-alt fa-xs"></i></p>
+                        </a>
+                        <p class="credential-issuer mb-0">Lean Six Sigma</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    
-    <div class="alert alert-info textsize">
-        <h2 class="tcenter">Web Programming Experties:</h2>
-        
-        <p>Proficient in database management, I have hands-on experience with technologies such as Sqlite3, Oracle SQL, MySQL, Azure SQL and MongoDB, leveraging these skills for seamless CRUD operations and creating Restful APIs for web applications.</p>
-        
-        <p>My ability to implement robust client-side and server-side validations ensures secure user management and optimal web functionality. I'm adept at utilizing cookies, sessions, and tokens for enhanced security.</p>
-        
-        <p>When developing web applications, I excel in creating well-structured routing for CRUD RESTful APIs and client-side interactions. Additionally, I have a keen eye for UI/UX design, utilizing Bootstrap and JavaScript to enhance the user experience.</p>
-        
-        <p>My proficiency extends to writing unit tests, test suites, and comprehensive documentation for both expected and received outcomes. I am dedicated to creating reliable and high-quality code that stands up to rigorous testing standards.</p>
-    
-        <p>Feel free to explore my portfolio to witness these skills in action. I look forward to the opportunity to contribute my expertise to real-world projects and connect with professionals who share a passion for web development.</p>
-    </div>
-    <div class="alert alert-info textsize">
-        <h2 class="tcenter">Certifications and Trainings</h2>
-        <ul>
-            <li><a href="https://learn.microsoft.com/api/credentials/share/en-us/VanDaiNghiaNguyen-9551/10A7734056D5D47B?sharingId=10117741F7D81AAF">AZ-900 Microsft Azure Fundamentals </a></li>
-            <li>Advanced CS50’s Web Programming with Python and JavaScript | Completed 75%+ problem sets | Harvard University</li>
-            <li><a href="https://certificates.cs50.io/21dfe796-797e-4ef1-be9b-513f1383b4ba.pdf?size=letter">CS50 Certificate obtained by scoring at least 70% on all problem sets and final projects | Harvard University | David J. Malan </a></li>
-            <li><a href="https://www.udemy.com/certificate/UC-581104fe-8efd-4429-8bd1-22a8ee062156/">The Complete JavaScript Course | Udemy |  Wordle, Blackjack, solved 100 JavaScript problems | Jonas Schmedtmann </a></li>
-        </ul> 
-    </div>
-    <div class="alert alert-info textsize">
-        <h2 class="tcenter">Programming Languages, Frameworks & Tools</h2>
-        <ul>
-            <li><b>Experienced:</b> Python, JavaScript, C#, HTML5/CSS, Sqlite3, Oracle SQL, MySQL, MongoDB, Linux, Django, Java, JavaFX</li>
-            <li><b>Familiar:</b> C++, C, Scratch, Agile, MATLAB, LabVIEW</li>
-            <li><b>Frameworks, Libraries & Tools:</b> MERN Stack, Flask, CS50 IDE, Visual Studio, VS Code, Anaconda, Spyder, Postman, Visual Paradigm, Visio, Git, GitHub, React, Nodejs, CRUD APIs, RESTful APIs</li>
-        </ul>
-    </div>
-    <div class="alert alert-info textsize">
-        <h2 class="tcenter">Mission Statement</h2>
-        <P>My mission as a web programming student is to secure a co-op position that not only provides valuable hands-on experience but also aligns with my passion for web development. I am committed to applying the knowledge and skills I've acquired in my studies to create innovative and user-friendly web solutions. I seek opportunities to collaborate with experienced professionals, learn from their expertise, and contribute my own creativity to real-world projects. Through dedication, adaptability, and a commitment to continuous learning, I aim to make a meaningful impact in the field of web development and contribute to the success of the organization I join during my co-op experience</P>
-    </div>
-    <div class="alert alert-info textsize">
-        <a href="/Resume.pdf" onclick="openInNewWindow('/Resume.pdf'); return false;"><h2 class="tcenter">Download My Resume (pdf)</h2></a>
-    </div>
-</div>
-<div class="height350"></div>
+    </section>
 </main>
 
-      <%- include ('partials/bottom_nav.ejs') %>
-      <%- include ('partials/footer.ejs') %>
-
-
-
-   
+<%- include ('partials/bottom_nav.ejs') %>
+<%- include ('partials/footer.ejs') %>
